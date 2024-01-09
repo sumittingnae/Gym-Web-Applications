@@ -1,0 +1,94 @@
+<!-- <template>
+    <lightning-card title="Classes">
+        <lightning-layout class="slds-var-p-left_medium">
+            <template for:each={classList} for:item="classes">
+                <lightning-layout key={classes.Id} multiple-rows class="slds-border-left">
+                    <lightning-layout-item size="4" padding="around-small" class="slds-align_absolute-center">
+                        <div data-id={classes.Name} onclick={handleBrandClick}>
+                            <img src={classes.Images__c} style="width: 300px;" alt={classes.Name}>
+                            <p class="text-align-center">{classes.Name}</p>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+        </lightning-layout>
+    </lightning-card>
+<template if:true={showModal}>
+    <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1" class="slds-modal slds-fade-in-open">
+        <div class="slds-modal__container">
+            modal header start
+            <header class="slds-modal__header">
+                <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                title="Close" onclick={hideBox}>
+                <lightning-icon icon-name='utility:close' alternative-text='close' size='large' title='close'></lightning-icon>
+                <span class="slds-assistive-text">Close</span>
+            </button>
+            <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Welcome to {className}</h2>
+            </header>
+            MODAL BODY START
+            <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                <lightning-spinner size="small" if:true={showSpinner}></lightning-spinner>
+                <lightning-datatable
+                key-field="id"
+                data={classesInfo}
+                columns={columns}
+                hide-checkbox-column="true"></lightning-datatable>
+
+            </div>
+            modal footer start
+            <footer class="slds-modal__footer">
+                <button class="slds-button slds-button_neutral" onclick={hideBox}>Cancel</button>
+            </footer>
+        </div>
+    </section>
+<div class="slds-backdrop slds-backdrop_open"></div>
+</template>
+
+</template>  -->
+<template>
+    <lightning-card title="Classes">
+        <lightning-layout class="slds-var-p-left_medium">
+            <template for:each={classList} for:item="classes">
+                <lightning-layout key={classes.Id} multiple-rows class="slds-border-left">
+                    <lightning-layout-item size="4" padding="around-small" class="slds-align_absolute-center">
+                        <div data-id={classes.Name} onclick={handleBrandClick}>
+                            <img src={classes.Images__c} style="width: 300px;" alt={classes.Name}>
+                            <p class="text-align-center">{classes.Name}</p>
+                        </div>
+                    </lightning-layout-item>
+                </lightning-layout>
+            </template>
+        </lightning-layout>
+    </lightning-card>
+
+    <template if:true={showModal}>
+        <section role="dialog" tabindex="-1" aria-labelledby="modal-heading-01" aria-describedby="modal-content-id-1"
+            class="slds-modal slds-fade-in-open">
+            <div class="slds-modal__container">
+                <!-- modal header start -->
+                <header class="slds-modal__header">
+                    <button class="slds-button slds-button_icon slds-modal__close slds-button_icon-inverse"
+                        title="Close" onclick={hideBox}>
+                        <lightning-icon icon-name='utility:close' alternative-text='close' size='large'
+                            title='close'></lightning-icon>
+                        <span class="slds-assistive-text">Close</span>
+                    </button>
+                    <h2 id="modal-heading-01" class="slds-text-heading_medium slds-hyphenate">Welcome to {className}
+                    </h2>
+                </header>
+                <!-- MODAL BODY START -->
+                <div class="slds-modal__content slds-p-around_medium" id="modal-content-id-1">
+                    <lightning-spinner size="small" if:true={showSpinner}></lightning-spinner>
+                    <lightning-datatable key-field="id" data={classesInfo} columns={columns}
+                        hide-checkbox-column="true">
+                    </lightning-datatable>
+                </div>
+                <!-- modal footer start -->
+                <footer class="slds-modal__footer">
+                    <button class="slds-button slds-button_neutral" onclick={hideBox}>Cancel</button>
+                </footer>
+            </div>
+        </section>
+        <div class="slds-backdrop slds-backdrop_open"></div>
+    </template>
+</template>
