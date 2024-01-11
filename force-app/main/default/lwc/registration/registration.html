@@ -2,7 +2,25 @@
     
 </template> -->
 <template>
-    <div class="">
+    <lightning-card title="Create the member regitration">
+        <div class="slds-var-m-around_small">
+            
+            <lightning-input label="Name" type="text" onchange={handlechange} name="Name__c" value={memberregister.Name__c}></lightning-input>
+           
+            <lightning-input label="Contact" type="phone" name="Contact__c" onchange={handlechange} value={memberregister.Contact__c}></lightning-input>
+            
+            <lightning-input label="Email" type="text" name="Email__c" onchange={handlechange} value={memberregister.Email__c}></lightning-input>
+            
+            <lightning-input label="DOJ" type="datetime" name="DOJ__c" onchange={handlechange} value={memberregister.DOJ__c}></lightning-input>
+            
+            <lightning-input label="Package" type="text" name="Packages__c" onchange={handlechange} value={memberregister.Packages__c}></lightning-input>
+            
+            <lightning-input label="Package Price" type="text" name="Package_Price__c" onchange={handlechange} value={memberregister.Package_Price__c}></lightning-input>
+            
+            <lightning-button label="Submit" variant="brand" onclick={handleSubmitInformation} style="margin-top: 20px;" ></lightning-button>
+            <!-- <lightning-button label="Clear" variant="brand" onclick={handleClear} style="margin-top: 20px;"></lightning-button> -->
 
-    </div>
+        </div>
+
+    </lightning-card>
 </template>
